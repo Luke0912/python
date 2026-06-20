@@ -10,11 +10,11 @@ Run this file with:  python3 topic1_syntax_variables.py
 # SECTION 1: Basic Variables
 # ─────────────────────────────────────────────
 
-name: str = "Shubham"        # string
-age: int = 25                # integer
-height: float = 5.11         # float
-is_active: bool = True       # boolean (capital T!)
-nothing = None               # None (equivalent to null)
+name: str = "Shubham"        # string name: str = "shubham"
+age: int = 25                # integer age: int = 25
+height: float = 5.11         # float height: float = 5.11
+is_active: bool = True       # boolean (capital T!) is_active : bool = True
+nothing = None               # None (equivalent to null) nothing : None = None
 
 print("--- Basic Variables ---")
 print(f"Name: {name}")
@@ -32,6 +32,7 @@ print(type(name))             # <class 'str'>
 print(type(age))              # <class 'int'>
 print(isinstance(age, int))   # True
 print(isinstance(name, int))  # False
+print("-->",isinstance(age, str)) # False 
 
 # ─────────────────────────────────────────────
 # SECTION 3: String Interpolation (f-strings)
@@ -39,7 +40,9 @@ print(isinstance(name, int))  # False
 
 print("\n--- f-strings ---")
 greeting = f"Hello, {name}! You are {age} years old."
+greetings = f"my name is {name} and age is {age}"
 print(greeting)
+print(f"{name} is {age} years old")
 
 # Expressions inside f-strings
 print(f"Next year you'll be {age + 1}")
@@ -102,6 +105,13 @@ Then print a formatted summary using an f-string like:
 
 # YOUR CODE HERE
 
+username : str = "shubham"
+followers : int = 10
+rating : float = 4.11
+is_verified : bool = True
+
+print(f"{username} has {followers} followers, rating {rating}, verified: {is_verified}")
+
 
 """
 EXERCISE 2:
@@ -111,6 +121,14 @@ Print them before and after the swap.
 """
 
 # YOUR CODE HERE
+
+a : int = 5
+b : int = 10
+print("before swap", a,b)
+
+a,b = b,a
+print("after swap", a,b)
+
 
 
 """
@@ -125,6 +143,10 @@ print(type(x + int(y)))
 """
 
 # YOUR PREDICTION HERE (comment):
+# 30
+# 1020
+# int
+
 # Run it and see if you were right:
 x = 10
 y = "20"
